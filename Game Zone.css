@@ -1,0 +1,296 @@
+body{
+    margin: 0%;
+    padding: auto;
+    overflow: hidden;
+}
+
+
+
+#nvbar{
+    height: 80px;
+    width: 100%;
+    background-color:powderblue;
+    display: flex;
+    flex-direction: row;
+    
+
+}
+
+#gz{
+    height: auto;
+    width: fit-content;
+    display: flex;
+    align-content: center;
+    justify-content:left;
+    align-items: center;
+    
+    
+
+}
+
+
+#games{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    height: auto;
+    align-items: center;
+    
+    
+    justify-content: space-around;
+}
+
+.gm_btn{
+    
+    
+    height:60px;
+    border: none;
+    width: 25%;
+    border-radius: 25px;
+    background-color:snow;
+    font-size: 100%;
+    font-weight: 500;
+    font-style: italic;
+    align-content: center;
+}
+
+#search{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    height: auto;
+    justify-content: center;
+    
+
+}
+
+input{
+    width: 200%;
+    height: 40px;
+    border-radius: 25px;
+    margin:auto;
+    border: none;
+    background-color:whitesmoke;
+    font-size: 100%;
+    
+}
+
+#srch_btn{
+    width: 100%;
+    height: 40px;
+    border-radius: 25px;
+   
+    border: none;
+    margin: auto;
+    background-color:thistle;
+    font-size:100%;
+}
+
+
+#game_container{
+    
+    width: 88.3%;
+    height: 80%;
+    background-color:powderblue;
+    margin-top:1%;
+    border-radius: 20px;
+    justify-content: center;
+    margin-left:5%;
+
+}
+
+
+
+
+#settings_container{
+display: flex;
+flex-direction: row;
+width: 100%;
+height: 40px;
+background-color:black;
+border-radius: 20px;
+}
+
+.timer_score{
+    display: flex;
+    flex-direction: column;
+    margin: 3px;
+    width: 20%;
+    height: auto;
+    background-color: cadetblue;
+    justify-content: center;
+    text-align: center;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    font-style: inherit;
+    border-radius: 20px;
+    
+}
+
+#score{
+    width: 65%;
+}
+
+#settings{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width:30% ;
+    margin: 3px;
+    background-color: cadetblue;
+    border-radius: 20px;
+    justify-content:space-evenly;
+}
+
+.setng_btn{
+    height: auto;
+    width: 100%;
+    border-radius: 25px;
+    border: none;
+    margin: 4px;
+    gap: 5px;
+    background-color:oldlace;
+    text-align: center;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    
+}
+
+#board{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: black;
+    width: 40%;
+    height: 30vw;
+    margin-top: 1%;
+    margin-left:25%;
+    border-radius: 5%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+
+.hole{
+    width: 80px;
+    height: 80px;
+    border-radius: 80%;
+    background-color: aliceblue;
+    box-shadow: inset 0 5px 0 3px khaki ;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+
+
+@media (max-width:768px) {
+  .hole{
+    width: 60px;
+    height: 60px;
+}
+}
+
+
+@media (max-width:480px) {
+    .hole{
+        height: 40px;
+        width: 40px;
+    }
+    
+}
+
+.hole .mole{
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0;
+    animation: rise .3s ease-out;
+
+    
+}
+
+@keyframes rise {
+    0%{
+        transform: translateX(-50%) translateY(100%);
+    }
+    100%{
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+
+#stsp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.start_pause{
+    justify-content: center;
+    height: 50px;
+    width: 200px;
+    border-radius: 25px;
+    border: none;
+    background-color: snow;
+    text-align: center;
+    font-size: large;
+    font-weight: 600;
+    font-style: oblique;
+    
+    
+}
+
+#start{
+    margin-left: 15px;
+    margin-bottom: 10px
+
+}
+
+#pause{
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+
+.cursor{
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    background-image: url(hammer.png);
+    background-size:100% 100%;
+    
+    transition: tranform .1s;
+    pointer-events: none;
+
+
+}
+
+@media (max-width:768px) {
+    .cursor{
+      width: 60px;
+      height: 60px;
+  }
+  }
+  
+  
+  @media (max-width:480px) {
+      .cursor{
+          height: 40px;
+          width: 40px;
+      }
+      
+  }
+
+.cursor.active{
+    transform: rotate(-45deg);
+}
+
